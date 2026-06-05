@@ -1,3 +1,5 @@
+export const runtime = "nodejs"
+
 import { readFile } from "fs/promises"
 import path from "path"
 import { NextResponse } from "next/server"
