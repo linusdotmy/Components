@@ -4,11 +4,10 @@ Component registry for my own UI, reusable, for my projects.
 
 The registry lives at https://ui.linus.my, registry components live in ``/r/registry.json``.
 
-Insert a component into your project using
+Insert a component into your project using ``shadcn``
 
-```
-npx shadcn@latest add https://ui.linus.my/r/event.json
-# Inserts my event logging component
+```bash
+npx shadcn@latest add https://ui.linus.my/r/event.json # Inserts my event logging component
 ```
 
 # License
