@@ -4,6 +4,22 @@
   "homepage": "https://ui.linus.my",
   "items": [
     {
+      "name": "event",
+      "type": "registry:ui",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "components/event.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "types.ts",
+          "type": "registry:file",
+          "target": "types.ts"
+        }
+      ]
+    },
+    {
       "name": "theme",
       "type": "registry:theme",
       "cssVars": {
