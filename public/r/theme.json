@@ -1,6 +1,6 @@
 {
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "theme",
-  "type": "registry:theme",
   "cssVars": {
     "theme": {
       "radius": "0.45rem"
@@ -71,5 +71,6 @@
       "sidebar-border": "oklch(1 0 0 / 10%)",
       "sidebar-ring": "oklch(0.556 0 0)"
     }
-  }
+  },
+  "type": "registry:theme"
 }
