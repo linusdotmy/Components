@@ -26,23 +26,23 @@ export default function Event({ title, icon, time, content, fields, events, data
     const hasDrawerContent = Boolean(content || actions?.length || hasData || fields?.length || events?.length);
 
     return (
-        <div className="rounded-lg bg-card p-2 text-white shadow-sm ring-1 ring-white/5">
+        <div data-slot="card" className="rounded-lg bg-card p-2">
             <div className="flex items-center gap-3">
-                <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-background text-xl">
+                <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-muted text-xl">
                     {icon}
                 </div>
 
                 <div className="flex min-w-0 flex-1 items-center gap-2">
-                    <p className="shrink-0 text-sm font-medium leading-none text-foreground/65">
+                    <p className="shrink-0 text-sm font-medium leading-none text-muted-foreground">
                         {time}
                     </p>
 
-                    <p className="truncate text-sm font-semibold leading-snug text-white">
+                    <p className="truncate text-sm font-semibold leading-snug text-foreground">
                         {title}
                     </p>
 
                     {category && (
-                        <span className="shrink-0 rounded-full bg-white/8 px-2 py-0.5 text-[10px] font-medium text-eventcontent/60 capitalize hidden sm:inline-block">
+                        <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground capitalize hidden sm:inline-block">
                             {category}
                         </span>
                     )}
@@ -71,7 +71,7 @@ export default function Event({ title, icon, time, content, fields, events, data
                     <div className="overflow-hidden">
                         <div className="flex flex-col gap-3 pb-1">
                             {content && (
-                                <div className="text-sm leading-relaxed text-eventcontent/80">
+                                <div className="text-sm leading-relaxed text-muted-foreground">
                                     {content}
                                 </div>
                             )}
@@ -80,10 +80,10 @@ export default function Event({ title, icon, time, content, fields, events, data
                                 <div className="grid grid-cols-2 gap-x-4 gap-y-1">
                                     {fields.map((field, index) => (
                                         <div key={index} className="flex flex-col">
-                                            <span className="text-sm text-foreground/80">
+                                            <span className="text-sm text-muted-foreground">
                                                 {field.name}
                                             </span>
-                                            <span className="text-sm text-white">
+                                            <span className="text-sm font-medium text-foreground">
                                                 {field.value}
                                             </span>
                                         </div>
@@ -91,24 +91,22 @@ export default function Event({ title, icon, time, content, fields, events, data
                                 </div>
                             )}
 
-
-
                             {events && (
                                 <div className="relative flex flex-col gap-5 pt-2 ml-1">
-                                    <div className="absolute left-[15px] top-2 bottom-2 border-l-2 border-dashed border-white/20 z-0" />
+                                    <div className="absolute left-[15px] top-2 bottom-2 border-l-2 border-dashed border-border z-0" />
 
                                     {events.map((event, index) => (
                                         <div key={index} className="relative z-10 flex items-center gap-4">
 
-                                            <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-background ring-4 ring-card text-xs">
+                                            <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-muted ring-4 ring-card text-xs">
                                                 {event.icon}
                                             </div>
 
                                             <div className="min-w-0 flex-1 flex flex-wrap items-center gap-2">
-                                                <p className="text-sm font-medium leading-none text-foreground/65">
+                                                <p className="text-sm font-medium leading-none text-muted-foreground">
                                                     {relativeTime(event.time)}
                                                 </p>
-                                                <p className="text-sm leading-relaxed text-white">
+                                                <p className="text-sm leading-relaxed text-foreground">
                                                     {event.content}
                                                 </p>
                                             </div>
@@ -118,8 +116,8 @@ export default function Event({ title, icon, time, content, fields, events, data
                             )}
 
                             {hasData && (
-                                <div className="relative rounded-md bg-eventbg">
-                                    <pre className="max-h-48 overflow-auto p-2 pr-16 text-sm bg-input/30 rounded-md text-foreground/80">
+                                <div className="relative rounded-md">
+                                    <pre className="max-h-48 overflow-auto p-2 pr-16 text-sm bg-secondary rounded-md text-foreground">
                                         {JSON.stringify(data, null, 2)}
                                     </pre>
                                 </div>

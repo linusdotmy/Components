@@ -10,8 +10,8 @@ function ThemeProvider({
   return (
     <NextThemesProvider
       attribute="class"
-      forcedTheme="dark"
-      disableTransitionOnChange
+      defaultTheme="dark"
+disableTransitionOnChange
       {...props}
     >
       <ThemeHotkey />

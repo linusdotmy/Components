@@ -4,6 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip"
 import { Navbar } from "@/components/navbar"
 import { GeistSans } from "geist/font/sans";
 
+export const metadata = {
+    title: "kang/ui",
+    description: "UI components built by Linus Kang",
+}
+
 export default function RootLayout(
     {
         children,
