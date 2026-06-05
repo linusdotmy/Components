@@ -8,7 +8,12 @@
             "type": "registry:ui",
             "registryDependencies": [
                 "button",
-                "event"
+                "card",
+                "cardcontent",
+                "carddescription",
+                "cardfooter",
+                "cardheader",
+                "cardtitle"
             ],
             "files": [
                 {
