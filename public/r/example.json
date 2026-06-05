@@ -3,12 +3,7 @@
   "name": "example",
   "registryDependencies": [
     "button",
-    "card",
-    "cardcontent",
-    "carddescription",
-    "cardfooter",
-    "cardheader",
-    "cardtitle"
+    "card"
   ],
   "files": [
     {
