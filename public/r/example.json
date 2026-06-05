@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "example",
+  "registryDependencies": [
+    "button",
+    "event"
+  ],
+  "files": [
+    {
+      "path": "components/ui-card-demo-card.tsx",
+      "content": "\"use client\"\n\nimport { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from \"@/components/ui/card\"\nimport { Button } from \"@/components/ui/button\"\n\nexport default function UiCardDemoCard() {\n    return (\n        <Card className=\"break-inside-avoid\">\n            <CardHeader>\n                <div className=\"flex items-center justify-between\">\n                    <CardTitle>Card</CardTitle>\n                </div>\n                <CardDescription>A surface for grouping related content and actions.</CardDescription>\n            </CardHeader>\n            <CardContent className=\"space-y-3\">\n                <p className=\"text-xs font-medium text-muted-foreground\">Preview</p>\n                <Card className=\"shadow-none bg-secondary\">\n                    <CardHeader>\n                        <CardTitle className=\"text-sm\">Card Title</CardTitle>\n                        <CardDescription>A short description goes here.</CardDescription>\n                    </CardHeader>\n                    <CardFooter>\n                        <Button size=\"sm\">Action</Button>\n                    </CardFooter>\n                </Card>\n            </CardContent>\n        </Card>\n    )\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "type": "registry:ui"
+}
